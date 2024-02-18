@@ -1,14 +1,14 @@
-import { AllRoutes } from './routes/AllRoutes';
+import { AllRoutes } from "./routes/AllRoutes";
 
-import { Header } from './pages';
-import { Footer } from './pages';
+import { Header } from "./pages";
+import { Footer } from "./pages";
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <AllRoutes/>
-      <Footer/>
+      <Header />
+      <AllRoutes />
+      <Footer />
     </div>
   );
 }
