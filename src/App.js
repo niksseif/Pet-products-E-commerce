@@ -1,7 +1,6 @@
 import { AllRoutes } from "./routes/AllRoutes";
+import { Header, Footer } from "./pages";
 
-import { Header } from "./pages";
-import { Footer } from "./pages";
 
 function App() {
   return (
