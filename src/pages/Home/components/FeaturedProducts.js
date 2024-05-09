@@ -1,16 +1,16 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from "react";
 import { ProductCard } from "../../../components/Elements/ProductCard";
 
 export function FeaturedProducts() {
   const [featuredProducts, setFeaturedProducts] = useState([]);
 
-async function fetchProducts(){
-  const result = await fetch("http://localhost:3000/featured_products")
-  const data = await result.json();
-  setFeaturedProducts(data)
-}
+  async function fetchProducts() {
+    const result = await fetch("http://localhost:3000/featured_products");
+    const data = await result.json();
+    setFeaturedProducts(data);
+  }
   useEffect(() => {
-    fetchProducts()
+    fetchProducts();
   }, []);
 
   return (
@@ -19,7 +19,9 @@ async function fetchProducts(){
         Feature products
       </h1>
       <div className="flex flex-wrap justify-center lg:flex-row">
-        { featuredProducts.map((product) => (<ProductCard product={product} key={product.id}/>)) }
+        {featuredProducts.map((product) => (
+          <ProductCard product={product} key={product.id} />
+        ))}
       </div>
     </section>
   );
