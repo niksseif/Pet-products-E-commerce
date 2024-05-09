@@ -2,42 +2,42 @@
     "products": [
       {
         "id": 1001,
-        "name": "Luxurious Cat Bed",
-        "overview": "A comfortable and stylish cat bed for the modern pet owner.",
-        "long_description": "This luxurious cat bed combines comfort with style, featuring a modern, minimalist design and soft, velvety fabric. Perfect for cats of all sizes, it offers a cozy retreat for your furry friend.",
-        "price": 50,
-        "poster": "https://example.com/path/to/image.jpg",
-        "image_local": "/assets/images/1001.avif",
-        "rating": 4.5,
-        "in_stock": true,
-        "size": "Medium",
-        "best_seller": false
-      },
-      {
-        "id": 1002,
-        "name": "Interactive Pet Toy",
-        "overview": "Keep your pet engaged with this interactive toy designed to stimulate their mind.",
-        "long_description": "Our interactive pet toy features dynamic movement and is designed to keep your pet engaged and active. It's great for mental stimulation and physical exercise, making it a must-have for energetic pets.",
-        "price": 25,
-        "poster": "https://example.com/path/to/image.jpg",
-        "image_local": "/assets/images/1002.avif",
-        "rating": 4,
-        "in_stock": true,
-        "size": "One Size",
-        "best_seller": true
-      },
-      {
-        "id": 1003,
         "name": "Pet Safety Harness",
         "overview": "Safety first with our comfortable and adjustable pet safety harness.",
         "long_description": "Ensure your pet's safety during travel with our adjustable safety harness. Designed for comfort and durability, it's ideal for long trips and prevents any harm that might come to your pet.",
         "price": 30,
         "poster": "https://example.com/path/to/image.jpg",
-        "image_local": "/assets/images/1003.avif",
+        "image_local": "/assets/images/1001.avif",
         "rating": 4.2,
         "in_stock": true,
         "size": "Small, Medium, Large",
-        "best_seller": false
+        "best_seller": true
+      },
+      {
+        "id": 1002,
+        "name": "Luxurious Cat Bed",
+        "overview": "A comfortable and stylish cat bed for the modern pet owner.",
+        "long_description": "This luxurious cat bed combines comfort with style, featuring a modern, minimalist design and soft, velvety fabric. Perfect for cats of all sizes, it offers a cozy retreat for your furry friend.",
+        "price": 50,
+        "poster": "https://example.com/path/to/image.jpg",
+        "image_local": "/assets/images/1002.avif",
+        "rating": 4.5,
+        "in_stock": true,
+        "size": "Medium",
+        "best_seller": true
+      },
+      {
+        "id": 1003,
+        "name": "Interactive Pet Toy",
+        "overview": "Keep your pet engaged with this interactive toy designed to stimulate their mind.",
+        "long_description": "Our interactive pet toy features dynamic movement and is designed to keep your pet engaged and active. It's great for mental stimulation and physical exercise, making it a must-have for energetic pets.",
+        "price": 25,
+        "poster": "https://example.com/path/to/image.jpg",
+        "image_local": "/assets/images/1003.avif",
+        "rating": 4,
+        "in_stock": true,
+        "size": "One Size",
+        "best_seller": true
       },
       {
         "id": 1004,
