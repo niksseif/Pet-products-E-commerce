@@ -155,46 +155,8 @@
         "in_stock": true,
         "size": "Medium",
         "best_seller": false
-      },
-      {
-        "id": 10013,
-        "name": "Elegant Pet Sweater",
-        "overview": "Chic and warm sweater for your pet.",
-        "long_description": "Keep your pet warm and stylish with our elegant pet sweater, suitable for small to medium dogs.",
-        "price": 25,
-        "poster": "https://example.com/path/to/image.jpg",
-        "image_local": "/assets/images/10013.avif",
-        "rating": 4.6,
-        "in_stock": true,
-        "size": "Small, Medium",
-        "best_seller": false
-      },
-      {
-        "id": 10014,
-        "name": "Chic Pet Jacket",
-        "overview": "A fashionable jacket for stylish pets.",
-        "long_description": "This chic pet jacket not only keeps your pet warm but also adds a touch of style to their daily walks, suitable for all weather conditions.",
-        "price": 50,
-        "poster": "https://example.com/path/to/image.jpg",
-        "image_local": "/assets/images/10014.avif",
-        "rating": 4.8,
-        "in_stock": true,
-        "size": "Medium, Large",
-        "best_seller": true
-      },
-      {
-        "id": 10015,
-        "name": "Pet Travel Kit",
-        "overview": "Essential kit for pet travel.",
-        "long_description": "Our pet travel kit includes everything your pet needs for a comfortable journey, from food containers to portable water bottles.",
-        "price": 45,
-        "poster": "https://example.com/path/to/image.jpg",
-        "image_local": "/assets/images/10015.avif",
-        "rating": 4.4,
-        "in_stock": true,
-        "size": "One Size",
-        "best_seller": false
       }
+      
     ],
     "featured_products": [
       {

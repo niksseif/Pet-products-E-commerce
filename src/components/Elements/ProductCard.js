@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import productImage from "../../assets/images/1001.avif";
+
 export function ProductCard({ product }) {
   const {
     id,
@@ -11,13 +11,13 @@ export function ProductCard({ product }) {
     rating,
     best_seller,
   } = product;
-  console.log(id, "<>>id")
+ 
   return (
     <div className="m-3 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
       <Link to={`products/${id}`} className="relative">
-        <span className="absolute top-4 left-2 px-2 bg-orange-500 bg-opacity-90 text-white rounded">
+        {best_seller && <span className="absolute top-4 left-2 px-2 bg-orange-500 bg-opacity-90 text-white rounded">
           Best Seller
-        </span>
+        </span>}
         <img
           className="rounded-t-lg w-full h-64"
           src={`../..${image_local}`}
