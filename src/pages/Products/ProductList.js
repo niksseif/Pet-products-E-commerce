@@ -1,10 +1,10 @@
 import { ProductCard } from "../../components/Elements/ProductCard";
 import { FilterBar } from "./Components/FilterBar";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import productImage from "../../assets/images/10013.avif";
 export const ProductList = () => {
   const [show, setShow] = useState(false);
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([]);
 
   async function fetchProducts() {
     const result = await fetch("http://localhost:3000/products");
@@ -42,7 +42,9 @@ export const ProductList = () => {
           </span>
         </div>
         <div className="flex flex-wrap justify-center lg:flex-row">
-          {products.map((product) => (<ProductCard key={product.id}product={product}/>))}
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
       </section>
       {show && <FilterBar setShow={setShow} />}
