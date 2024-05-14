@@ -1,4 +1,4 @@
-import { ProductCard } from "../../components/Elements/ProductCard";
+import { ProductCard } from "../../components";
 import { FilterBar } from "./Components/FilterBar";
 import { useState, useEffect } from "react";
 import productImage from "../../assets/images/10013.avif";
@@ -19,7 +19,7 @@ export const ProductList = () => {
       <section className="my-5">
         <div className="my-5 flex justify-between">
           <span className="text-2xl front-semibold dark:text-slate-100 mb-5">
-            All products(15)
+            All products({products.length})
           </span>
           <span>
             <button
