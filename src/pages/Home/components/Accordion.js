@@ -53,7 +53,7 @@ export function Accordion({ faq }) {
         <div
           id="accordion-flush-body-1"
           className=""
-          aria-labelledby="accordion-flush-heading-1"
+          labeled="accordion-flush-heading-1"
         >
           <div className="py-5 border-b border-gray-200 dark:border-gray-700">
             <p className="text-lg mb-2 text-gray-500 dark:text-gray-400">
