@@ -1,4 +1,4 @@
-# PetStore – React Pet Product Application
+# Pet Product Store – React Pet Product Application
 
 Welcome to **PetStore**, an innovative e-commerce application dedicated to pet lovers. This project showcases a dynamic React application designed to offer a seamless shopping experience for pet products. Each product and image featured in the application is uniquely generated using advanced AI technologies, including OpenAI's GPT for text and descriptions, and Unsplash for high-quality images.
 
