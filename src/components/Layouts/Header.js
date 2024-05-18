@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo32x33.png";
 import { useEffect, useState } from "react";
+import { Search } from "../Sections/Search";
 export function Header() {
   const [darkMode, setDarkMode] = useState(
     JSON.parse(localStorage.getItem("darkMode")) || false
@@ -46,6 +47,7 @@ export function Header() {
           </div>
         </div>
       </nav>
+      <Search/>
     </header>
   );
 }

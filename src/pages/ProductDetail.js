@@ -7,12 +7,13 @@ export const ProductDetail = () => {
   const { id } = useParams();
   const { name, overview, price, rating, image_local, in_stock, best_seller } =
     product;
-  async function getProduct() {
-    const result = await fetch(`http://localhost:3000/products/${id}`);
-    const data = await result.json();
-    setProduct(data);
-  }
+
   useEffect(() => {
+    async function getProduct() {
+      const result = await fetch(`http://localhost:3000/products/${id}`);
+      const data = await result.json();
+      setProduct(data);
+    }
     getProduct();
   }, [id]);
   return (
