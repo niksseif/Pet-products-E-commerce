@@ -1,0 +1,43 @@
+{
+  "products" :[
+    {
+      "id": 1,
+      "name": "Interactive Pet Toy",
+      "overview": "Keep your pet engaged with this interactive toy designed to stimulate their mind.",
+      "long_description": "Our interactive pet toy features dynamic movement and is designed to keep your pet engaged and active. It's great for mental stimulation and physical exercise, making it a must-have for energetic pets.",
+      "price": 25,
+      "poster": "https://example.com/path/to/image.jpg",
+      "image_local": "/assets/images/1003.avif",
+      "rating": 4,
+      "in_stock": true,
+      "size": "One Size",
+      "best_seller": true
+    },
+    {
+      "id": 2,
+      "name": "Interactive Pet Toy",
+      "overview": "Keep your pet engaged with this interactive toy designed to stimulate their mind.",
+      "long_description": "Our interactive pet toy features dynamic movement and is designed to keep your pet engaged and active. It's great for mental stimulation and physical exercise, making it a must-have for energetic pets.",
+      "price": 25,
+      "poster": "https://example.com/path/to/image.jpg",
+      "image_local": "/assets/images/1003.avif",
+      "rating": 4,
+      "in_stock": true,
+      "size": "One Size",
+      "best_seller": true
+    },
+    {
+      "id": 2,
+      "name": "Interactive Pet Toy",
+      "overview": "Keep your pet engaged with this interactive toy designed to stimulate their mind.",
+      "long_description": "Our interactive pet toy features dynamic movement and is designed to keep your pet engaged and active. It's great for mental stimulation and physical exercise, making it a must-have for energetic pets.",
+      "price": 25,
+      "poster": "https://example.com/path/to/image.jpg",
+      "image_local": "/assets/images/1003.avif",
+      "rating": 4,
+      "in_stock": true,
+      "size": "One Size",
+      "best_seller": true
+    }
+  ]
+}
