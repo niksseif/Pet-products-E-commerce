@@ -6,6 +6,7 @@ export function Header() {
   const [darkMode, setDarkMode] = useState(
     JSON.parse(localStorage.getItem("darkMode")) || false
   );
+  const [showSearch,setShowSearch] = useState(false)
 
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
@@ -40,14 +41,15 @@ export function Header() {
                 onClick={() => setDarkMode(!darkMode)}
                 className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5  bi bi-gear"
               ></span>
-              <span className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-search-heart-fill"></span>
+              <span onClick ={() => setShowSearch(!showSearch)}className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-search-heart-fill"></span>
               <span className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-bag-heart"></span>
               <span className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-person"></span>
             </div>
           </div>
         </div>
       </nav>
-      <Search/>
+
+      {showSearch && <Search/>}
     </header>
   );
 }

@@ -8,7 +8,7 @@ export const Search = ({ setSearchSection }) => {
         <div className="relative w-full">
           <span className="bi bi-search flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"></span>
           <input
-            ref=""
+            // ref=""
             name="search"
             type="text"
             id="simple-search"
