@@ -18,7 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server" : "npx json-server data/db.json",
+    "server": "npx json-server data/db.json",
+    "cy:open": "cypress open",
     "format": "prettier --write \"src/**/*.{js,jsx}\""
   },
   "eslintConfig": {
@@ -41,6 +42,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "cypress": "^13.9.0",
     "eslint": "8.24.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
