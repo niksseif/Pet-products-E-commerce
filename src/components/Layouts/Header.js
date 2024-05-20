@@ -49,7 +49,7 @@ export function Header() {
         </div>
       </nav>
 
-      {showSearch && <Search/>}
+      {showSearch && <Search setShowSearch={setShowSearch}/>}
     </header>
   );
 }

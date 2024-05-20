@@ -1,19 +1,27 @@
 import { ProductCard } from "../../components";
 import { FilterBar } from "./Components/FilterBar";
 import { useState, useEffect } from "react";
-import productImage from "../../assets/images/10013.avif";
+import { useLocation } from "react-router-dom";
+
+
 export const ProductList = () => {
   const [show, setShow] = useState(false);
   const [products, setProducts] = useState([]);
+  const search = useLocation().search;
+  const searchTerm = new URLSearchParams(search).get("q");
+  
 
-  async function fetchProducts() {
-    const result = await fetch("http://localhost:3000/products");
-    const data = await result.json();
-    setProducts(data);
-  }
+  
   useEffect(() => {
+    async function fetchProducts() {
+      
+      const result = await fetch(`http://localhost:3000/products?name_like=${searchTerm ? searchTerm.toLowerCase() : ""}`);
+      const data = await result.json();
+      setProducts(data);
+      
+    }
     fetchProducts();
-  }, []);
+  }, [searchTerm]);
   return (
     <main>
       <section className="my-5">
