@@ -14,7 +14,9 @@ describe('Homepage test', () => {
     cy.visit('http://localhost:3001');
     cy.wait('@getFeaturedProducts').its('response.body').should('be.an', 'array').and('have.length', 2);
   });
-
+  it('sets the document title correctly', () => {
+    cy.title().should('eq', 'Access Pet products - Pet products');
+  });
   it('renders the logo and header text', () => {
     cy.get('header').within(() => {
       cy.get('img').should('have.attr', 'src');
