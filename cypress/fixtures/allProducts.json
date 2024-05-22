@@ -1,5 +1,4 @@
-{
-  "products" :[
+[
     {
       "id": 1,
       "name": "Interactive Pet Toy",
@@ -40,4 +39,3 @@
       "best_seller": true
     }
   ]
-}
