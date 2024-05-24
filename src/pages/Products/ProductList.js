@@ -14,21 +14,16 @@ export const ProductList = () => {
   const searchTerm = new URLSearchParams(search).get("q");
   useTitle("Explore our Pet products page")
   
-  const memoizedInitProductList = useCallback(
-    (data) => initProductList(data),
-    [initProductList]
-  );
-
   useEffect(() => {
     async function fetchProducts() {
-      const result = await fetch(
-        `http://localhost:3000/products?name_like=${searchTerm ? searchTerm.toLowerCase() : ""}`
-      );
+      
+      const result = await fetch(`http://localhost:3000/products?name_like=${searchTerm ? searchTerm.toLowerCase() : ""}`);
       const data = await result.json();
-      memoizedInitProductList(data);
+      initProductList(data)
+      
     }
     fetchProducts();
-  }, [searchTerm, memoizedInitProductList]);
+  }, [searchTerm]);
   return (
     <main>
       <section className="my-5">
