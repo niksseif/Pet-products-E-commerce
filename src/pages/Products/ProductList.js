@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useLocation } from "react-router-dom";
 import { useTitle } from "../../hooks/useTitle";
 import { ProductCard } from "../../components";
@@ -8,22 +8,27 @@ import { useFilter } from "../../context";
 
 
 export const ProductList = () => {
-  // const { productList } = useFilter()
+  const { products, initProductList } = useFilter()
   const [show, setShow] = useState(false);
-  const [products, setProducts] = useState([]);
   const search = useLocation().search;
   const searchTerm = new URLSearchParams(search).get("q");
   useTitle("Explore our Pet products page")
+  
+  const memoizedInitProductList = useCallback(
+    (data) => initProductList(data),
+    [initProductList]
+  );
+
   useEffect(() => {
     async function fetchProducts() {
-      
-      const result = await fetch(`http://localhost:3000/products?name_like=${searchTerm ? searchTerm.toLowerCase() : ""}`);
+      const result = await fetch(
+        `http://localhost:3000/products?name_like=${searchTerm ? searchTerm.toLowerCase() : ""}`
+      );
       const data = await result.json();
-      setProducts(data);
-      
+      memoizedInitProductList(data);
     }
     fetchProducts();
-  }, [searchTerm]);
+  }, [searchTerm, memoizedInitProductList]);
   return (
     <main>
       <section className="my-5">
@@ -52,7 +57,7 @@ export const ProductList = () => {
           </span>
         </div>
         <div className="flex flex-wrap justify-center lg:flex-row">
-          {products.map((product) => (
+          { products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
