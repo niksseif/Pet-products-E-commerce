@@ -8,7 +8,7 @@
       "price": 30,
       "poster": "https://example.com/path/to/image.jpg",
       "image_local": "/assets/images/1001.avif",
-      "rating": 4.2,
+      "rating": 1,
       "in_stock": true,
       "size": "Small, Medium, Large",
       "best_seller": true
@@ -100,7 +100,7 @@
       "poster": "https://example.com/path/to/image.jpg",
       "image_local": "/assets/images/1008.avif",
       "rating": 4.3,
-      "in_stock": true,
+      "in_stock": false,
       "size": "One Size",
       "best_seller": true
     },
@@ -126,7 +126,7 @@
       "poster": "https://example.com/path/to/image.jpg",
       "image_local": "/assets/images/10010.avif",
       "rating": 4.5,
-      "in_stock": true,
+      "in_stock": false,
       "size": "Small, Medium, Large",
       "best_seller": false
     },

@@ -1,21 +1,21 @@
-
-
+// !!!!getting an error from best seller about the spread operator!!!!
 export const filterReducer = (state, action) => {
-    const {type, payload} = action; 
-    switch(type){
-        case "PRODUCT_LIST":
-            return { ...state, productList: payload.products }
-        case "SORT_BY":
-            return 
-        case "RATINGS":
-            return 
-        case "BEST_SELLER":
-            return
-        case "IN_STOCK":
-            return  
-        case " CLEAR_FILTER":
-            return
-        default:
-            throw new Error("No case found")
-    }
-}
+  const { type, payload } = action;
+  console.log(payload, "<>>>payload");
+  switch (type) {
+    case "PRODUCT_LIST":
+      return { productList: payload.products };
+    case "SORT_BY":
+      return { ...state, sortBy: payload.sortBy };
+    case "RATINGS":
+      return { ...state, rating: payload.rating };
+    case "BEST_SELLER":
+      return { ...state, bestSeller: payload.bestSeller };
+    case "IN_STOCK":
+      return { ...state, inStock: payload.inStock };
+    case " CLEAR_FILTER":
+      return;
+    default:
+      throw new Error("No case found");
+  }
+};

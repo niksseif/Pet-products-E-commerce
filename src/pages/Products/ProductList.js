@@ -5,22 +5,22 @@ import { ProductCard } from "../../components";
 import { FilterBar } from "./Components/FilterBar";
 import { useFilter } from "../../context";
 
-
-
 export const ProductList = () => {
-  const { products, initProductList } = useFilter()
+  const { products, initProductList } = useFilter();
   const [show, setShow] = useState(false);
   const search = useLocation().search;
   const searchTerm = new URLSearchParams(search).get("q");
-  useTitle("Explore our Pet products page")
-  
+  useTitle("Explore our Pet products page");
+
   useEffect(() => {
     async function fetchProducts() {
-      
-      const result = await fetch(`http://localhost:3000/products?name_like=${searchTerm ? searchTerm.toLowerCase() : ""}`);
+      const result = await fetch(
+        `http://localhost:3000/products?name_like=${
+          searchTerm ? searchTerm.toLowerCase() : ""
+        }`
+      );
       const data = await result.json();
-      initProductList(data)
-      
+      initProductList(data);
     }
     fetchProducts();
   }, [searchTerm]);
@@ -52,7 +52,7 @@ export const ProductList = () => {
           </span>
         </div>
         <div className="flex flex-wrap justify-center lg:flex-row">
-          { products.map((product) => (
+          {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

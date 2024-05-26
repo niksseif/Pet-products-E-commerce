@@ -1,4 +1,6 @@
+import { useFilter } from "../../../context";
 export function FilterBar({ setShow }) {
+  const { state, dispatch } = useFilter();
   return (
     <section className="filter">
       <div
@@ -46,6 +48,13 @@ export function FilterBar({ setShow }) {
                 <input
                   id="price-sort-1"
                   type="radio"
+                  onChange={() =>
+                    dispatch({
+                      type: "SORT_BY",
+                      payload: { sortBy: "lowtohigh" },
+                    })
+                  }
+                  checked={state.sortBy === "lowtohigh"}
                   value=""
                   name="price-sort"
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 dark:bg-gray-700 dark:border-gray-600"
@@ -61,6 +70,13 @@ export function FilterBar({ setShow }) {
                 <input
                   id="price-sort-2"
                   type="radio"
+                  onChange={() =>
+                    dispatch({
+                      type: "SORT_BY",
+                      payload: { sortBy: "hightolow" },
+                    })
+                  }
+                  checked={state.sortBy === "hightolow"}
                   value=""
                   name="price-sort"
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 dark:bg-gray-700 dark:border-gray-600"
@@ -79,6 +95,13 @@ export function FilterBar({ setShow }) {
                 <input
                   id="rating-sort-1"
                   type="radio"
+                  onChange={() =>
+                    dispatch({
+                      type: "RATINGS",
+                      payload: { rating: "4STARSABOVE" },
+                    })
+                  }
+                  checked={state.rating === "4STARSABOVE" || false}
                   value=""
                   name="rating-sort"
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 dark:bg-gray-700 dark:border-gray-600"
@@ -94,6 +117,13 @@ export function FilterBar({ setShow }) {
                 <input
                   id="rating-sort-2"
                   type="radio"
+                  onChange={() =>
+                    dispatch({
+                      type: "RATINGS",
+                      payload: { rating: "3STARSABOVE" },
+                    })
+                  }
+                  checked={state.rating === "3STARSABOVE" || false}
                   value=""
                   name="rating-sort"
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 dark:bg-gray-700 dark:border-gray-600"
@@ -109,6 +139,13 @@ export function FilterBar({ setShow }) {
                 <input
                   id="rating-sort-3"
                   type="radio"
+                  onChange={() =>
+                    dispatch({
+                      type: "RATINGS",
+                      payload: { rating: "2STARSABOVE" },
+                    })
+                  }
+                  checked={state.rating === "2STARSABOVE" || false}
                   value=""
                   name="rating-sort"
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 dark:bg-gray-700 dark:border-gray-600"
@@ -124,6 +161,13 @@ export function FilterBar({ setShow }) {
                 <input
                   id="rating-sort-4"
                   type="radio"
+                  onChange={() =>
+                    dispatch({
+                      type: "RATINGS",
+                      payload: { rating: "1STARSABOVE" },
+                    })
+                  }
+                  checked={state.rating === "1STARSABOVE" || false}
                   value=""
                   name="rating-sort"
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 dark:bg-gray-700 dark:border-gray-600"
@@ -141,6 +185,13 @@ export function FilterBar({ setShow }) {
               <div className="flex items-center my-1">
                 <input
                   id="best-seller"
+                  checked={state.bestSeller}
+                  onChange={() =>
+                    dispatch({
+                      type: "BEST_SELLER",
+                      payload: { bestSeller: !state.bestSeller },
+                    })
+                  }
                   type="checkbox"
                   value=""
                   className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 dark:bg-gray-700 dark:border-gray-600"
@@ -155,6 +206,13 @@ export function FilterBar({ setShow }) {
               <div className="flex items-center my-1">
                 <input
                   id="only-instock"
+                  checked={state.inStock}
+                  onChange={() =>
+                    dispatch({
+                      type: "IN_STOCK",
+                      payload: { inStock: !state.inStock },
+                    })
+                  }
                   type="checkbox"
                   value=""
                   className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 dark:bg-gray-700 dark:border-gray-600"
