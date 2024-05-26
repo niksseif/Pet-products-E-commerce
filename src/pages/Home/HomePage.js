@@ -4,7 +4,7 @@ import { FeaturedProducts } from "./components/FeaturedProducts";
 import { Testimonials } from "./components/Testimonials";
 import { Faq } from "./components/Faq";
 export const HomePage = () => {
-  useTitle("Access Pet products")
+  useTitle("Access Pet products");
   return (
     <main>
       <Hero />

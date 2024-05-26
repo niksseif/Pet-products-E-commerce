@@ -3,13 +3,12 @@ import { useParams } from "react-router-dom";
 import { useTitle } from "../hooks/useTitle";
 import { Rating } from "../components/Elements/Rating";
 
-
 export const ProductDetail = () => {
   let [product, setProduct] = useState({});
   const { id } = useParams();
   const { name, overview, price, rating, image_local, in_stock, best_seller } =
     product;
-  useTitle(product.name)
+  useTitle(product.name);
 
   useEffect(() => {
     async function getProduct() {
