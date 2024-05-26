@@ -21,7 +21,7 @@
       "price": 50,
       "poster": "https://example.com/path/to/image.jpg",
       "image_local": "/assets/images/1002.avif",
-      "rating": 4.5,
+      "rating": 3,
       "in_stock": true,
       "size": "Medium",
       "best_seller": true
@@ -34,7 +34,7 @@
       "price": 25,
       "poster": "https://example.com/path/to/image.jpg",
       "image_local": "/assets/images/1003.avif",
-      "rating": 4,
+      "rating": 2,
       "in_stock": true,
       "size": "One Size",
       "best_seller": true
@@ -47,7 +47,7 @@
       "price": 55,
       "poster": "https://example.com/path/to/image.jpg",
       "image_local": "/assets/images/1004.avif",
-      "rating": 4.8,
+      "rating": 2,
       "in_stock": true,
       "size": "Large",
       "best_seller": false
@@ -60,7 +60,7 @@
       "price": 100,
       "poster": "https://example.com/path/to/image.jpg",
       "image_local": "/assets/images/1005.avif",
-      "rating": 4.9,
+      "rating": 4,
       "in_stock": true,
       "size": "One Size",
       "best_seller": true
