@@ -14,13 +14,13 @@ export const filterReducer = (state, action) => {
     case "IN_STOCK":
       return { ...state, inStock: payload.inStock };
     case "CLEAR_FILTER":
-      return { 
-        ...state, 
+      return {
+        ...state,
         inStock: false,
         bestSeller: false,
         sortBy: null,
         rating: null,
-    }
+      };
     default:
       throw new Error("No case found");
   }
