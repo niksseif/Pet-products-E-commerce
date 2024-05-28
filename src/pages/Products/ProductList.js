@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useTitle } from "../../hooks/useTitle";
 import { ProductCard } from "../../components";
@@ -15,7 +15,7 @@ export const ProductList = () => {
   useEffect(() => {
     async function fetchProducts() {
       const result = await fetch(
-        `http://localhost:3000/products?name_like=${
+        `http://localhost:8000/products?name_like=${
           searchTerm ? searchTerm.toLowerCase() : ""
         }`
       );

@@ -12,7 +12,7 @@ export const ProductDetail = () => {
 
   useEffect(() => {
     async function getProduct() {
-      const result = await fetch(`http://localhost:3000/products/${id}`);
+      const result = await fetch(`http://localhost:8000/products/${id}`);
       const data = await result.json();
       setProduct(data);
     }

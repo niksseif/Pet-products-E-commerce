@@ -5,7 +5,7 @@ export function FeaturedProducts() {
   const [featuredProducts, setFeaturedProducts] = useState([]);
 
   async function fetchProducts() {
-    const result = await fetch("http://localhost:3000/featured_products");
+    const result = await fetch("http://localhost:8000/featured_products");
     const data = await result.json();
     setFeaturedProducts(data);
   }
