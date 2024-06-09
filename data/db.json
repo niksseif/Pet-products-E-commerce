@@ -237,6 +237,12 @@
       "password": "$2a$10$UtVQRQs2.6GZvT0nxZN2/.WvT2Tva9rHfXtuojVPin9RnGRv91lgi",
       "name": "nicole",
       "id": 2
+    },
+    {
+      "email": "nik.safe@gmail.com",
+      "password": "$2a$10$.1r5ePeWVU.OR6AjrxtjNuY/lzOWI9ZYnr9hqLWldri51XRb.gNYO",
+      "name": "nicolet",
+      "id": 3
     }
   ]
 }
