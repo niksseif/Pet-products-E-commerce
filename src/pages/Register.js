@@ -1,4 +1,20 @@
 export const Register = () => {
+    async function handleRegister(event){
+        event.preventDefault();
+        const authDetail = {
+            name : event.target.name.value,
+            email : event.target.email.value,
+            password : event.target.password.value
+        }
+        const requestOptions = {
+            method: "POST", 
+            headers: {"content-Type" : "application/json"},
+            body : JSON.stringify(authDetail)
+        }
+        const response = await fetch("http://localhost:8000/register", requestOptions);
+        const data = await response.json()
+        
+    }
   return (
     <main>
       <section>
@@ -6,7 +22,7 @@ export const Register = () => {
           Register
         </p>
       </section>
-      <form>
+      <form onSubmit={handleRegister}>
         <div className="mb-6">
           <label
             htmlFor="name"
