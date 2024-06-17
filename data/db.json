@@ -239,16 +239,16 @@
       "id": 2
     },
     {
-      "email": "nik.safe@gmail.com",
-      "password": "$2a$10$.1r5ePeWVU.OR6AjrxtjNuY/lzOWI9ZYnr9hqLWldri51XRb.gNYO",
-      "name": "nicolet",
-      "id": 3
-    },
-    {
       "email": "fd@fd.com",
       "password": "$2a$10$XwqDgOfJcta39pom/QR0fOe1Ot8upeqgtj5PRH6rRtfaqqHH0V.4m",
       "name": "fd",
       "id": 4
+    },
+    {
+      "email": "nik.safe@gmail.com",
+      "password": "$2a$10$VAIi4Nx4J9OjN4SQ5tsUheWIiXmrCnJn8nL4q.FFI53Ons13Nrpwa",
+      "name": "ds",
+      "id": 5
     }
   ]
 }
