@@ -151,7 +151,7 @@
       "price": 55,
       "poster": "https://example.com/path/to/image.jpg",
       "image_local": "/assets/images/10012.avif",
-      "rating": 5.0,
+      "rating": 5,
       "in_stock": true,
       "size": "Medium",
       "best_seller": false
@@ -231,6 +231,24 @@
       "password": "$2a$10$K9aEH3/VDb2QU/EsjrHGJO7X5JxCcg0bMAnBtyT3kBW9FL7FnnygO",
       "name": "Nik Seif",
       "id": 1
+    },
+    {
+      "email": "nicole@dd.com",
+      "password": "$2a$10$UtVQRQs2.6GZvT0nxZN2/.WvT2Tva9rHfXtuojVPin9RnGRv91lgi",
+      "name": "nicole",
+      "id": 2
+    },
+    {
+      "email": "fd@fd.com",
+      "password": "$2a$10$XwqDgOfJcta39pom/QR0fOe1Ot8upeqgtj5PRH6rRtfaqqHH0V.4m",
+      "name": "fd",
+      "id": 4
+    },
+    {
+      "email": "nik.safe@gmail.com",
+      "password": "$2a$10$VAIi4Nx4J9OjN4SQ5tsUheWIiXmrCnJn8nL4q.FFI53Ons13Nrpwa",
+      "name": "ds",
+      "id": 5
     }
   ]
 }

@@ -4,7 +4,7 @@ describe('Homepage test', () => {
   beforeEach(() => {
     cy.intercept(
       "GET", 
-      "http://localhost:3000/featured_products",
+      "http://localhost:8000/featured_products",
       {
         statusCode:200,
         fixture : "featured_products"

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTitle } from "../hooks/useTitle";
 import { Rating } from "../components/Elements/Rating";
@@ -9,15 +9,16 @@ export const ProductDetail = () => {
   const { name, overview, price, rating, image_local, in_stock, best_seller } =
     product;
   useTitle(product.name);
-
+  
+const getProduct = useCallback(async () => {
+  const result = await fetch(`http://localhost:8000/products/${id}`);
+  const data = await result.json();
+  setProduct(data);
+}, [id]) 
+  
   useEffect(() => {
-    async function getProduct() {
-      const result = await fetch(`http://localhost:3000/products/${id}`);
-      const data = await result.json();
-      setProduct(data);
-    }
     getProduct();
-  }, [id]);
+  }, [getProduct]);
   return (
     <main>
       <section>
