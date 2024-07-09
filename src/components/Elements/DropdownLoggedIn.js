@@ -1,11 +1,12 @@
 import { Link,useNavigate } from "react-router-dom";
 
-export const DropdownLoggedIn = () => {
+export const DropdownLoggedIn = ({setDropDown}) => {
   const navigate = useNavigate()
   function handleLogout(){
     sessionStorage.removeItem("token");
     sessionStorage.removeItem("ppid");
     navigate('/')
+    setDropDown(false)
   }
   return (
     <div
@@ -22,6 +23,7 @@ export const DropdownLoggedIn = () => {
         <li>
           <Link
             to="/products"
+            onClick={() => setDropDown(false)}
             className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
           >
             All products
@@ -30,6 +32,7 @@ export const DropdownLoggedIn = () => {
         <li>
           <Link
             to="/dashboard"
+            onClick={() => setDropDown(false)}
             className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
           >
             Dashboard

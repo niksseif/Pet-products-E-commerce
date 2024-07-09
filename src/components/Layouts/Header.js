@@ -52,7 +52,7 @@ export function Header() {
                 onClick={() => setDropDown(!dropDown)}
                 className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-person"
               ></span>
-              {dropDown && (token? <DropdownLoggedIn /> : <DropdownLoggedOut />)}
+              {dropDown && (token? <DropdownLoggedIn setDropDown={setDropDown}/> : <DropdownLoggedOut setDropDown={setDropDown}/>)}
             </div>
           </div>
         </div>
